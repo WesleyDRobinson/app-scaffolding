@@ -2,11 +2,11 @@
 
 ### Motivation
 
-developing a framework to scaffold a small application to builde simple web pages on the web platform.
+a small framework for constructing web platform applications and sites
 
 ### Requirements
 
-- pleasant, high-velocity developer experience
+- pleasant, high-velocity prototyping experience
 - delightful for the end user
 
 ## How to

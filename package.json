@@ -6,13 +6,14 @@
     "express": "^4.16.3",
     "webpack": "^4.5.0"
   },
+  "main": "src/app.js",
   "devDependencies": {
     "npm-run-all": "4.1.2",
     "webpack-cli": "^2.0.14"
   },
   "scripts": {
-    "build": "webpack-cli src/app.js -p public/js/app.js",
-    "build:watch": "webpack-cli -w -d src/app.js public/js/app.js",
+    "build": "webpack src/app.js -o public/js/app.js",
+    "build:watch": "webpack -w -d src/app.js -o public/js/app.js",
     "deploy": "now --public",
     "deploy:static": "npm run build && now --static ./public -n app-scaffolding --public",
     "dev": "npm-run-all -p build:watch start",

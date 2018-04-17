@@ -55,13 +55,13 @@
 </head>
 <body class="bg-light-gray">
 
+<!-- we can use web platform standards and still avoid this old "div soup" -->
+<div id="app-shell" class="vh-100"></div>
 
-<div id="app-shell" class="vh-100 w-100 bg-dark-gray"></div>
-
-<!-- can use method .popToast(message) -->
+<!-- a more semantic web -->
 <custom-toaster></custom-toaster>
 
-<!-- load components, routing, and custom app logic-->
+<!-- load custom elements (components, objects), enables routing, and create custom app logic-->
 <script src="/js/app.js"></script>
 </body>
 </html>
