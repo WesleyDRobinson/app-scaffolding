@@ -1,4 +1,6 @@
-# Wesley's Application Framework
+# An Application Framework
+
+[![framework screenshot](./public/assets/screenshot.png)](https://app-scaffolding.now.sh)
 
 ### Motivation
 
