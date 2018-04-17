@@ -1,6 +1,6 @@
 {
   "name": "app-scaffolding",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "create apps with web components",
   "dependencies": {
     "express": "^4.16.3",
