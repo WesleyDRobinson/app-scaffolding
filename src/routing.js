@@ -35,7 +35,7 @@ function loadPage1(ctx) {
     appShell.appendChild(div)
 }
 
-function main(ctx, next) {
+function main() {
     // bind custom-splash element to app-shell
     bind(appShell)`<custom-splash></custom-splash>`
 }

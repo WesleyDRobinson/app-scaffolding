@@ -9,8 +9,8 @@ class CustomModal extends HyperHTMLElement {
 
     render() {
         return this.html`
-            <div class="pointer glow pv2 br-pill ba b--purple bg-white-10"
-            onclick=${this}>custom modal example</div>`
+            <div class="pointer glow pv2 br-pill ba bw1 b--dark-pink pink bg-near-white tc b tracked"
+            onclick=${this}>activate modal</div>`
     }
 
     onclick() {

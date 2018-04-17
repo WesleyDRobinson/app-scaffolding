@@ -9,21 +9,24 @@ class CustomSplash extends HyperHTMLElement {
     created() {
         this.entry = this.entry || 'fadeIn'
         this.exit = this.exit || 'fadeOut'
-        this.className = 'pa4 near-white avenir animated ' + this.entry
+        this.className = 'flex flex-column pl2 near-white bg-dark-gray avenir animated ' + this.entry
 
         this.render()
     }
 
     render() {
         return this.html`
-            <h1 class="ml2 bg-dark-gray">welcome to the framework</h1>
-            <div class="ml3 flex flex-wrap">
+            <h2 class="ml2 pa3 gradientSquare mw6">a web platform app framework</h2>
+            <div class="ml2 flex flex-wrap">
                 <a href="/page/red" class="link ma2 ph4 pv3 bg-animate bg-red hover-bg-dark-red near-white hover-white">Red Page</a>
                 <a href="/page/blue" class="link ma2 ph4 pv3 bg-animate bg-blue hover-bg-dark-blue near-white hover-white">Blue Page</a>
                 <a href="/page/green" class="link ma2 ph4 pv3 bg-animate bg-green hover-bg-dark-green near-white hover-white">Green Page</a>
                 <div class="pointer ma2 ph4 pv3 near-black bg-animate bg-gold hover-bg-light-yellow hover-black" onclick="${this}">Test the Toast</div>
             </div>
             
+            <p class="ml2 mt4">a helpful web app starting point and a few web components</p>
+            <custom-modal></custom-modal>
+
             <h3 class="ml2 mt4 mb0">some docs for the tools</h3>            
             <div id="featured-developer-tools" class="flex flex-wrap ml3"> 
                 <a href="https://viperhtml.js.org/hyperhtml/documentation/#introduction" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">hyperHTML</a> 
@@ -33,7 +36,6 @@ class CustomSplash extends HyperHTMLElement {
                 <a href="https://visionmedia.github.io/page.js/" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">page.js</a>
                 <a href="https://zeit.co/now" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">now</a>
             </div>
-            <custom-modal></custom-modal>
             <github-corner color="red"></github-corner>`
     }
 
@@ -61,7 +63,7 @@ class GithubCorner extends HyperHTMLElement {
         <a href="https://www.github.com/WesleyDRobinson/app-scaffolding" class="github-corner" aria-label="View source on Github">
             <svg width="125" height="125" viewBox="0 0 250 250"
                  class="${classList}"
-                 style="fill:#fff" aria-hidden="true">
+                 style="fill:#ffa3d7" aria-hidden="true">
 
                 ${wire(null, 'svg')`    
                         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>`}
