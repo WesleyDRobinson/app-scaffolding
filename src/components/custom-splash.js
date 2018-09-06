@@ -21,9 +21,12 @@ class CustomSplash extends HyperHTMLElement {
                 <a href="/page/blue" class="link ma2 ph4 pv3 bg-animate bg-blue hover-bg-dark-blue near-white hover-white">Blue Page</a>
                 <a href="/page/red" class="link ma2 ph4 pv3 bg-animate bg-red hover-bg-dark-red near-white hover-white">Red Page</a>
                 <a href="/page/green" class="link ma2 ph4 pv3 bg-animate bg-green hover-bg-dark-green near-white hover-white">Green Page</a>
-                <div class="pointer ma2 ph4 pv3 near-black bg-animate bg-gold hover-bg-light-yellow hover-black" onclick="${this}">Test the Toast</div>
             </div>
-            
+            <div class="mt3 ml2 mw6">
+                <label for="toast-message">Toast Message</label>
+                <input id="toast-message" type="text" class="mt2 pa2 w-100 lh-copy">
+                <div class="pointer w-100 ph4 pv3 near-black bg-gold tc dim" onclick="${this}">Test the Toast</div>
+            </div>
             <p class="ml2 mt4">a helpful web app starting point and a few web components</p>
             <custom-modal></custom-modal>
 
@@ -40,8 +43,9 @@ class CustomSplash extends HyperHTMLElement {
     }
 
     onclick() {
+        const message = document.getElementById('toast-message').value || 'Congratulations! it toasted'
         const toaster = document.querySelector('custom-toaster')
-        toaster.popToast('Congratulations! it toasted')
+        toaster.popToast(message)
     }
 }
 
