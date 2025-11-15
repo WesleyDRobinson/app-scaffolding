@@ -1,12 +1,18 @@
 class CustomLoader extends HyperHTMLElement {
     created() {
         this.className = `h-100 flex flex-column justify-center`
-        setInterval(() => {
+        this._interval = setInterval(() => {
             this.firstElementChild.classList.toggle('fadeIn')
             this.firstElementChild.classList.toggle('fadeOut')
         }, 1200)
 
         this.render()
+    }
+
+    disconnected() {
+        if (this._interval) {
+            clearInterval(this._interval)
+        }
     }
 
     render() {
@@ -18,3 +24,5 @@ class CustomLoader extends HyperHTMLElement {
 }
 
 CustomLoader.define('custom-loader')
+
+export default CustomLoader

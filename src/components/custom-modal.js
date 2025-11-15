@@ -1,7 +1,4 @@
-const {bind} = HyperHTMLElement
-
 class CustomModal extends HyperHTMLElement {
-
     created() {
         this.className = 'db w5 mh2'
         this.render()
@@ -32,7 +29,7 @@ class ModalInner extends HyperHTMLElement {
     render() {
         return this.html`
             <div class="pointer dt fixed bottom-1 left-1 h3 w3 br-100 bg-black-90 tc" onclick=${this}><span class="dtc v-mid white-90 f4">X</span></div>
-            
+
             <div class="pl4 pb5 center mw7 z-0 bg-washed-green">
                             <!--github corner, thanks to https://github.com/tholman/github-corners-->
                 <a href="https://www.github.com/WesleyDRobinson/dice" class="github-corner" aria-label="View source on Github">
@@ -47,56 +44,56 @@ class ModalInner extends HyperHTMLElement {
                     </svg>
                 </a>
                 <div class="pb3 pr3 lh-copy center measure measure-wide-ns bg-light-gray">
-                
-                <h2 class="dib mv0 pa3 bg-washed-green f4 f3-ns lh-title dark-green">Thanks for checking out the modal!</h2>     
+
+                <h2 class="dib mv0 pa3 bg-washed-green f4 f3-ns lh-title dark-green">Thanks for checking out the modal!</h2>
                 <h2 id="how-do-i-use-distributed-chat" class="dib mb0 pa2 dark-green bg-washed-green athelas tj ttu lh-title">How do I use this?</h2>
-                    <article class="pa2 lh-copy">                
+                    <article class="pa2 lh-copy">
                         <p>You could start replacing what you find here to build your own tool. <br>
                         Or consider it research for your own home-rolled framework.</p>
                         <p>The tools I've chosen make sense for me! Maybe you already agree with some; check out the others or replace the pieces you want.</p>
                         <p>You're doing it! Keep going!</p>
-                    </article>               
-                    
-        
+                    </article>
+
+
                 <h2 id="how-is-distributed-chat-different" class="dib mv0 pa2 dark-green bg-washed-green athelas ttu">Have you built any serious projects with this?</h2>
                     <article class="lh-copy">
-                    
+
                     <p class="pa2">Yes, I have.</p>
                     <ul class="list pl2">
-                        <li class="mb2">🌐 <a href="//dc.now.sh" class="i f4">Distributed Chat</a>, an <a class="link orange hover-blue courier bg-white" href="https://ipfs.io">InterPlanetary File System (IPFS)</a> node runs in the browser, connects directly to other nodes allowing for realtime chat</li>
+                        <li class="mb2">🌐 <a href="//dc.vercel.app" class="i f4">Distributed Chat</a>, an <a class="link orange hover-blue courier bg-white" href="https://ipfs.io">InterPlanetary File System (IPFS)</a> node runs in the browser, connects directly to other nodes allowing for realtime chat</li>
                         <li class="mb2">☠️<a href="//www.wesley.tech" class="i f4">wesley.tech</a>, do not mess with us or else</li>
                     </ul>
                     </article>
-                    <p class="pa2">Be careful <span class="i"> This is an experiment.</span> <br> 
+                    <p class="pa2">Be careful <span class="i"> This is an experiment.</span> <br>
                     Security and anonymity are difficult topics. <br>
                     You should carefully evaluate your risks and exposure with any software.
                     </p>
 
-                
-            
+
+
                 <h2 id="what-tools-does-distributed-chat-use" class="dib mb0 pa2 dark-green bg-washed-green athelas ttu">How is this built?</h2>
                     <article class="pa2">
                     <a class="link orange hover-blue" href="https://github.com/WesleyDRobinson/web-app-scaffold">Source on Github</a><br>
                     <a class="link orange hover-blue" href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a><br>
-                    
-                    <a class="link orange hover-blue" href="https://medium.com/@WebReflection/hyperhtml-a-virtual-dom-alternative-279db455ee0e">hyperHTML</a> and 
+
+                    <a class="link orange hover-blue" href="https://medium.com/@WebReflection/hyperhtml-a-virtual-dom-alternative-279db455ee0e">hyperHTML</a> and
                     <a class="link orange hover-blue" href="https://github.com/WebReflection/hyperHTML-Element">hyperHTMLElement</a> for building web components<br>
 
-                    <a class="link orange hover-blue" href="https://tachyons.io">tachyons</a> and 
+                    <a class="link orange hover-blue" href="https://tachyons.io">tachyons</a> and
                     <a class="link orange hover-blue" href="https://daneden.github.io/animate.css/">animate</a> CSS systems
-                    
-                    <p>recommend yarn package manager, Webpack module bundler (considering Parcel), npm scripts, zeit's now</p>
+
+                    <p>recommend yarn package manager, Webpack module bundler (considering Parcel), npm scripts, Vercel</p>
                     </article>
-                
+
                 <h2 id="is-distributed-chat-finished-can-i-contribute" class="dib mb0 pa2 dark-green bg-washed-green athelas ttu">Is this finished?</h2>
                     <article class="pa2">
-                        <p>While it's usable today, there are definitely enhancements in the works!</p> 
+                        <p>While it's usable today, there are definitely enhancements in the works!</p>
                         <p>And if you find any vulnerabilities or mistakes in the readme, please let us know!</p>
                         <p>My immediate goal is to offer service worker. (v1.0 milestone) <br>
                         version 2.0 release milestones includes auth/ user tiers
                         </p>
                         <p>Please check back periodically for updates.</p>
-                        <p><a class="link orange hover-blue" href="https://wesley.now.sh">And get in touch</a> if you'd like to suggest features or contribute to the project.</p>
+                        <p><a class="link orange hover-blue" href="https://wesley.vercel.app">And get in touch</a> if you'd like to suggest features or contribute to the project.</p>
                     </article>
 
             </div>
@@ -110,3 +107,5 @@ class ModalInner extends HyperHTMLElement {
 }
 
 ModalInner.define('modal-inner')
+
+export default CustomModal

@@ -1,5 +1,5 @@
-import CustomLoader from './components/custom-loader'
-import CustomSplash from './components/custom-splash'
+import './components/custom-loader'
+import './components/custom-splash'
 
 const {bind} = HyperHTMLElement
 const appShell = document.getElementById('app-shell')
@@ -29,7 +29,7 @@ function loadPage1(ctx) {
 
     bind(div)`<h1 class="lh-title">${ctx.state.color} Page</h1>
                 <p class="ml3 pa3 lh-copy measure-wide near-white bg-black-30">Write HTML and get JS variable insertion \`\${ variableAccess }\` for free!</p>
-                <span class="dib pointer ml3 mt3 pv2 ph3 br2 br-pill bg-animate bg-light-yellow ba b--light-blue hover-bg-yellow f4 tracked ttu blue" onclick=page('/')>go home</span>`
+                <span class="dib pointer ml3 mt3 pv2 ph3 br2 br-pill bg-animate bg-light-yellow ba b--light-blue hover-bg-yellow f4 tracked ttu blue" onclick=${() => page('/')}>go home</span>`
 
     appShell.innerHTML = ''
     appShell.appendChild(div)

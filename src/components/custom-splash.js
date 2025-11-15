@@ -1,5 +1,6 @@
-import CustomModal from './custom-modal'
-const {bind, wire} = HyperHTMLElement
+import './custom-modal'
+
+const {wire} = HyperHTMLElement
 
 class CustomSplash extends HyperHTMLElement {
     static get observedAttributes() {
@@ -34,7 +35,7 @@ class CustomSplash extends HyperHTMLElement {
                 <a href="http://tachyons.io" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">Tachyons</a> 
                 <a href="https://daneden.github.io/animate.css/" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">animate.css</a> 
                 <a href="https://visionmedia.github.io/page.js/" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">page.js</a>
-                <a href="https://zeit.co/now" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">now</a>
+                <a href="https://vercel.com" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">Vercel</a>
             </div>
             <github-corner color="red"></github-corner>`
     }
@@ -79,3 +80,5 @@ class GithubCorner extends HyperHTMLElement {
 }
 
 GithubCorner.define('github-corner')
+
+export default CustomSplash

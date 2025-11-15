@@ -14,13 +14,13 @@
   "scripts": {
     "build": "webpack src/app.js -o public/js/app.js",
     "build:watch": "webpack -w -d src/app.js -o public/js/app.js",
-    "deploy": "now --public",
-    "deploy:static": "npm run build && now --static ./public -n app-scaffolding --public",
+    "deploy": "vercel --public",
+    "deploy:static": "npm run build && vercel --static ./public -n app-scaffolding --public",
     "dev": "npm-run-all -p build:watch start",
-    "release": "yarn version && now alias",
+    "release": "yarn version && vercel alias",
     "start": "node server.js"
   },
-  "now": {
+  "vercel": {
     "public": true,
     "alias": [
       "app-scaffolding"
