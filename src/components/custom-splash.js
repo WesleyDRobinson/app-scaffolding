@@ -1,5 +1,6 @@
-import CustomModal from './custom-modal'
-const {bind, wire} = HyperHTMLElement
+import './custom-modal'
+
+const {wire} = HyperHTMLElement
 
 class CustomSplash extends HyperHTMLElement {
     static get observedAttributes() {
@@ -18,6 +19,7 @@ class CustomSplash extends HyperHTMLElement {
         return this.html`
             <h2 class="ml2 pa3 gradientSquare mw6">a web platform app framework</h2>
             <div class="ml2 flex flex-wrap">
+                <a href="/space" class="link ma2 ph4 pv3 bg-animate bg-dark-blue hover-bg-navy near-white hover-white">🌌 Space Gallery</a>
                 <a href="/page/red" class="link ma2 ph4 pv3 bg-animate bg-red hover-bg-dark-red near-white hover-white">Red Page</a>
                 <a href="/page/blue" class="link ma2 ph4 pv3 bg-animate bg-blue hover-bg-dark-blue near-white hover-white">Blue Page</a>
                 <a href="/page/green" class="link ma2 ph4 pv3 bg-animate bg-green hover-bg-dark-green near-white hover-white">Green Page</a>
@@ -34,7 +36,7 @@ class CustomSplash extends HyperHTMLElement {
                 <a href="http://tachyons.io" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">Tachyons</a> 
                 <a href="https://daneden.github.io/animate.css/" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">animate.css</a> 
                 <a href="https://visionmedia.github.io/page.js/" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">page.js</a>
-                <a href="https://zeit.co/now" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">now</a>
+                <a href="https://vercel.com" class="link dim pv2 ph3 ma2 br-pill ba bw1 b--blue blue bg-light-yellow">Vercel</a>
             </div>
             <github-corner color="red"></github-corner>`
     }
@@ -79,3 +81,5 @@ class GithubCorner extends HyperHTMLElement {
 }
 
 GithubCorner.define('github-corner')
+
+export default CustomSplash

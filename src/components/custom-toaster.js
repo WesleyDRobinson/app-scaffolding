@@ -40,3 +40,5 @@ class ToastAnnounce extends HyperHTMLElement {
 }
 
 ToastAnnounce.define('toast-announce')
+
+export default CustomToaster
