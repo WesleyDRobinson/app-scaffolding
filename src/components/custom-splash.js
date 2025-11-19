@@ -19,6 +19,7 @@ class CustomSplash extends HyperHTMLElement {
         return this.html`
             <h2 class="ml2 pa3 gradientSquare mw6">a web platform app framework</h2>
             <div class="ml2 flex flex-wrap">
+                <a href="/space" class="link ma2 ph4 pv3 bg-animate bg-dark-blue hover-bg-navy near-white hover-white">🌌 Space Gallery</a>
                 <a href="/page/red" class="link ma2 ph4 pv3 bg-animate bg-red hover-bg-dark-red near-white hover-white">Red Page</a>
                 <a href="/page/blue" class="link ma2 ph4 pv3 bg-animate bg-blue hover-bg-dark-blue near-white hover-white">Blue Page</a>
                 <a href="/page/green" class="link ma2 ph4 pv3 bg-animate bg-green hover-bg-dark-green near-white hover-white">Green Page</a>

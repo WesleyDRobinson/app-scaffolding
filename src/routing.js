@@ -1,11 +1,13 @@
 import './components/custom-loader'
 import './components/custom-splash'
+import './components/custom-space'
 
 const {bind} = HyperHTMLElement
 const appShell = document.getElementById('app-shell')
 const toaster = document.querySelector('custom-toaster')
 
 page('*', middleWare)
+page('/space', loadSpace)
 page('/page/:color', loadPage1)
 page('/', main)
 page()
@@ -33,6 +35,10 @@ function loadPage1(ctx) {
 
     appShell.innerHTML = ''
     appShell.appendChild(div)
+}
+
+function loadSpace() {
+    bind(appShell)`<custom-space></custom-space>`
 }
 
 function main() {
